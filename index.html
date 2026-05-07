@@ -1,1 +1,298 @@
-deadline bu surita
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wilfried Infos - Premium Business Solutions</title>
+    <link rel="canonical" href="https://ftp.git.wilfried.infos.st/" />
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/48/diamond--v1.png" type="image/x-icon">
+    <meta name="description" content="Wilfried Infos menyediakan layanan eksklusif kelas dunia untuk kebutuhan bisnis dan teknologi Anda. Pengalaman mewah dengan layanan profesional terbaik.">
+    <meta name="google-site-verification" content="3fynNYagQlpWEB7cFjLC8_7n9z0tqgpovmSbSvkxkf8" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-bg: #121212;
+            --card-bg: #1E1E1E;
+            --text-light: #F5F5F5;
+            --border-radius: 15px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Top Bar & Navigation */
+        header {
+            background: rgba(18, 18, 18, 0.95);
+            padding: 20px 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--primary-gold);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Hero Section with 3D Effect */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 10%;
+            background: radial-gradient(circle at top right, #2c2c2c, #121212);
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #D4AF37, #FBF5E6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-image {
+            flex: 1;
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 80%;
+            border-radius: var(--border-radius);
+            transform: rotateY(-15px) rotateX(10deg);
+            box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+            transition: 0.5s;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .hero-image img:hover {
+            transform: rotateY(0) rotateX(0);
+        }
+
+        /* Promotion Banner */
+        .promo-banner {
+            background: linear-gradient(45deg, #D4AF37, #996515);
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            margin-top: 80px;
+            color: #000;
+        }
+
+        /* Category Section */
+        .section-title {
+            text-align: center;
+            padding: 60px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 10%;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+        }
+
+        .category-card h3 {
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 10%;
+            background: #1a1a1a;
+            margin-top: 60px;
+            border-radius: 50px 50px 0 0;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            color: var(--primary-gold);
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item span {
+            margin-right: 15px;
+            color: var(--primary-gold);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; height: auto; }
+            .contact-container { grid-template-columns: 1fr; }
+            .hero-text h1 { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Wilfried Infos</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Excellence</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="promo-banner">
+        ✨ PENAWARAN TERBAIK: Diskon Eksklusif 30% untuk Reservasi Corporate Bulan Ini! ✨
+    </div>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Elevating Business <br> to the Next Level</h1>
+            <p>Selamat datang di Wilfried Infos. Kami menghadirkan perpaduan antara teknologi mutakhir dan estetika mewah untuk kesuksesan digital Anda.</p>
+            <br>
+            <a href="#contact" style="display: inline-block; padding: 15px 40px; background: var(--primary-gold); color: #000; text-decoration: none; border-radius: 30px; font-weight: bold;">Mulai Konsultasi</a>
+        </div>
+        <div class="hero-image">
+            <!-- Gambar dengan efek 3D -->
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Luxury Office">
+        </div>
+    </section>
+
+    <h2 class="section-title" id="services">Kategori Layanan Unggulan</h2>
+    <div class="categories">
+        <div class="category-card">
+            <img src="https://img.icons8.com/ios/50/D4AF37/luxury.png" alt="icon">
+            <h3>Hotel Management</h3>
+            <p>Sistem manajemen perhotelan terintegrasi dengan tampilan interface yang elegan dan modern.</p>
+        </div>
+        <div class="category-card">
+            <img src="https://img.icons8.com/ios/50/D4AF37/diamond.png" alt="icon">
+            <h3>Premium Branding</h3>
+            <p>Membangun identitas brand yang kuat, eksklusif, dan memiliki nilai jual tinggi di pasar global.</p>
+        </div>
+        <div class="category-card">
+            <img src="https://img.icons8.com/ios/50/D4AF37/globe.png" alt="icon">
+            <h3>Global Logistics</h3>
+            <p>Solusi pengiriman dan distribusi data maupun fisik dengan keamanan protokol https tingkat tinggi.</p>
+        </div>
+    </div>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Person</h2>
+                <p>Hubungi tim kami untuk layanan personal yang disesuaikan dengan kebutuhan eksklusif Anda.</p>
+                <br>
+                <div class="contact-item"><span>📍</span> Gedung Wilfried Center, Jakarta, Indonesia</div>
+                <div class="contact-item"><span>📞</span> +62 812 3456 7890</div>
+                <div class="contact-item"><span>📧</span> official@wilfried.infos.st</div>
+                <div class="contact-item"><span>🌐</span> https://ftp.git.wilfried.infos.st/</div>
+            </div>
+            <div class="contact-form">
+                <form style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" placeholder="Nama Lengkap" style="padding: 15px; border-radius: 10px; border: none; background: #2c2c2c; color: white;">
+                    <input type="email" placeholder="Email Anda" style="padding: 15px; border-radius: 10px; border: none; background: #2c2c2c; color: white;">
+                    <textarea placeholder="Pesan Anda" rows="4" style="padding: 15px; border-radius: 10px; border: none; background: #2c2c2c; color: white;"></textarea>
+                    <button type="submit" style="padding: 15px; border-radius: 10px; border: none; background: var(--primary-gold); color: black; font-weight: bold; cursor: pointer;">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+      <div style="display: none;">
+     <a href="https://www.wildlifeprairiestatepark.org/edu-native.html">slot deposit 5000</a>
+</div>
+    <footer>
+        &copy; 2026 Wilfried Infos. All Rights Reserved. <br>
+        Powered by HTTPS Secure Protocol | <a href="https://ftp.git.wilfried.infos.st/" style="color: var(--primary-gold);">ftp.git.wilfried.infos.st</a>
+    </footer>
+
+</body>
+</html>
